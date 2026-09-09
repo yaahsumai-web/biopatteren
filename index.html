@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BioPattern - Bioinformatics Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+
+<body>
+
+    <main class="chat-section" id="chatbot">
+
+        <div class="section-heading">
+            <p class="eyebrow">ASK & LEARN</p>
+
+            <h1>Your Bioinformatics Study Partner</h1>
+
+            <p>
+                Ask simple questions in English or Tamil.
+                BioPattern explains bioinformatics concepts
+                and guides users to trusted databases.
+            </p>
+        </div>
+
+
+        <div class="chat-layout">
+
+            <aside class="suggestions">
+                <p>Try asking</p>
+
+                <button class="prompt-chip">
+                    What is DNA?
+                </button>
+
+                <button class="prompt-chip">
+                    Explain GC content
+                </button>
+
+                <button class="prompt-chip">
+                    What is BLAST?
+                </button>
+
+                <button class="prompt-chip">
+                    Which database has protein data?
+                </button>
+            </aside>
+
+
+            <div class="chat-card">
+
+                <div class="chat-top">
+
+                    <div>
+                        <span class="online-dot"></span>
+                        BioPattern Assistant
+                    </div>
+
+                    <small>Educational mode</small>
+
+                </div>
+
+
+                <div
+                    class="chat-messages"
+                    id="chatMessages"
+                    aria-live="polite"
+                >
+
+                    <div class="message bot">
+
+                        <span class="avatar">⌁</span>
+
+                        <p>
+                            Hi! I'm BioPattern.
+                            Ask me about DNA, genomes,
+                            sequences, BLAST, or biological databases.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form class="chat-form" id="chatForm">
+
+                    <input
+                        id="chatInput"
+                        type="text"
+                        autocomplete="off"
+                        placeholder="Ask about DNA, genes, databases..."
+                        required
+                    >
+
+                    <button
+                        class="button primary"
+                        type="submit"
+                    >
+                        Send →
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
